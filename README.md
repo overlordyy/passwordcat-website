@@ -14,10 +14,6 @@ PasswordCat 官方网站 - 功能介绍与下载页面。
 └── README.md       # 说明文档
 ```
 
-## 🚀 部署方式
-
-将文件部署到支持 443 端口的服务器，配置域名 `wxbbsmange.com` 指向该服务器即可。
-
 ## 📄 许可证
 
 MIT License - 与 PasswordCat 主项目保持一致
