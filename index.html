@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PasswordCat - 智能密码管理器</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">
+        <span class="logo-icon">🔐</span>
+        <span class="logo-text">PasswordCat</span>
+      </div>
+      <div class="nav-links">
+        <a href="#features">功能</a>
+        <a href="#download">下载</a>
+        <a href="https://github.com/overlordyy/password_cat" target="_blank">GitHub</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-container">
+      <div class="hero-badge">🎉 v1.0.1 现已发布</div>
+      <h1 class="hero-title">
+        安全、简洁的<br>
+        <span class="gradient-text">密码管理工具</span>
+      </h1>
+      <p class="hero-subtitle">
+        PasswordCat 是一款开源的本地密码管理器，采用端到端加密，
+        支持密码和服务器信息管理，让你的数字资产安全无忧。
+      </p>
+      <div class="hero-actions">
+        <a href="#download" class="btn btn-primary">
+          <span>⬇️</span> 免费下载 macOS 版
+        </a>
+        <a href="https://github.com/overlordyy/password_cat" target="_blank" class="btn btn-secondary">
+          <span>⭐</span> Star on GitHub
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <span class="stat-number">🔒</span>
+          <span class="stat-label">本地加密存储</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">🚀</span>
+          <span class="stat-label">极速响应</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">🌙</span>
+          <span class="stat-label">深色模式</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Section -->
+  <section id="features" class="features">
+    <div class="container">
+      <h2 class="section-title">核心功能</h2>
+      <p class="section-subtitle">为安全和效率而生</p>
+      
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🔐</div>
+          <h3>端到端加密</h3>
+          <p>采用 AES-256-GCM 加密算法，所有数据本地存储，无需联网，杜绝数据泄露风险。</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🔑</div>
+          <h3>密码管理</h3>
+          <p>安全存储网站、应用的账号密码，支持分组管理、快速搜索、一键复制。</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🖥️</div>
+          <h3>服务器管理</h3>
+          <p>集中管理服务器连接信息，IP、域名、账户、密码一目了然，一键复制全部信息。</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">📁</div>
+          <h3>智能分组</h3>
+          <p>密码和服务器独立分组系统，灵活组织你的数字资产，查找更便捷。</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🎨</div>
+          <h3>现代 UI 设计</h3>
+          <p>简洁直观的界面，支持亮色/暗色主题切换，920×670 紧凑窗口，高效操作。</p>
+        </div>
+        
+        <div class="feature-card">
+          <div class="feature-icon">🔓</div>
+          <h3>主密码保护</h3>
+          <p>单一主密码解锁所有数据，采用 PBKDF2 密钥派生，暴力破解几乎不可能。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Download Section -->
+  <section id="download" class="download">
+    <div class="container">
+      <h2 class="section-title">立即下载</h2>
+      <p class="section-subtitle">选择适合你的平台</p>
+      
+      <div class="download-grid">
+        <div class="download-card active">
+          <div class="platform-icon">🍎</div>
+          <h3>macOS</h3>
+          <p class="version">版本 1.0.1</p>
+          <p class="arch">Apple Silicon (M1/M2/M3/M4)</p>
+          <a href="https://github.com/overlordyy/password_cat/releases/latest/download/PasswordCat_1.0.1_aarch64.dmg" class="btn btn-download">
+            <span>⬇️</span> 下载 DMG
+          </a>
+          <p class="download-note">支持 macOS 10.13+</p>
+        </div>
+        
+        <div class="download-card coming-soon">
+          <div class="platform-icon">🐧</div>
+          <h3>Linux</h3>
+          <p class="version">即将推出</p>
+          <p class="arch">AppImage 格式</p>
+          <button class="btn btn-disabled" disabled>
+            <span>🔜</span> 敬请期待
+          </button>
+          <p class="download-note">支持 Ubuntu/Debian/Fedora</p>
+        </div>
+        
+        <div class="download-card coming-soon">
+          <div class="platform-icon">🪟</div>
+          <h3>Windows</h3>
+          <p class="version">即将推出</p>
+          <p class="arch">64-bit 安装包</p>
+          <button class="btn btn-disabled" disabled>
+            <span>🔜</span> 敬请期待
+          </button>
+          <p class="download-note">支持 Windows 10/11</p>
+        </div>
+      </div>
+      
+      <div class="download-source">
+        <p>也可以从 <a href="https://github.com/overlordyy/password_cat/releases" target="_blank">GitHub Releases</a> 下载历史版本</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Screenshot Section -->
+  <section class="screenshot">
+    <div class="container">
+      <h2 class="section-title">界面预览</h2>
+      <div class="screenshot-showcase">
+        <div class="screenshot-frame">
+          <div class="mockup-header">
+            <div class="mockup-dots">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="mockup-title">PasswordCat</div>
+          </div>
+          <div class="mockup-content">
+            <div class="mockup-sidebar">
+              <div class="mockup-nav active">🔑 密码</div>
+              <div class="mockup-nav">🖥️ 服务器</div>
+              <div class="mockup-nav">📝 笔记</div>
+            </div>
+            <div class="mockup-main">
+              <div class="mockup-card">
+                <div class="mockup-card-header">
+                  <span>🐙 GitHub</span>
+                  <span class="mockup-tag">开发</span>
+                </div>
+                <div class="mockup-card-row">
+                  <span class="mockup-label">账户</span>
+                  <span class="mockup-value">user@example.com</span>
+                </div>
+                <div class="mockup-card-row">
+                  <span class="mockup-label">密码</span>
+                  <span class="mockup-value">••••••••</span>
+                </div>
+              </div>
+              <div class="mockup-card">
+                <div class="mockup-card-header">
+                  <span>📧 Gmail</span>
+                  <span class="mockup-tag">邮箱</span>
+                </div>
+                <div class="mockup-card-row">
+                  <span class="mockup-label">账户</span>
+                  <span class="mockup-value">user@gmail.com</span>
+                </div>
+                <div class="mockup-card-row">
+                  <span class="mockup-label">密码</span>
+                  <span class="mockup-value">••••••••</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <span class="logo-icon">🔐</span>
+          <span class="logo-text">PasswordCat</span>
+        </div>
+        <p class="footer-desc">开源、安全、本地的密码管理解决方案</p>
+        <div class="footer-links">
+          <a href="https://github.com/overlordyy/password_cat" target="_blank">GitHub</a>
+          <a href="https://github.com/overlordyy/password_cat/issues" target="_blank">反馈问题</a>
+          <a href="https://github.com/overlordyy/password_cat/blob/main/LICENSE" target="_blank">许可证</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2025 PasswordCat. Open Source under MIT License.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
