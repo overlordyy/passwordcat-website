@@ -29,7 +29,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
-      <div class="hero-badge">🎉 v1.0.4 现已发布</div>
+      <div class="hero-badge">🎉 v1.0.5 现已发布</div>
       <h1 class="hero-title">
         安全、简洁的<br>
         <span class="gradient-text">密码管理工具</span>
@@ -97,13 +97,27 @@
         <div class="feature-card">
           <div class="feature-icon">🎨</div>
           <h3>现代 UI 设计</h3>
-          <p>简洁直观的界面，支持亮色/暗色主题切换，920×670 紧凑窗口，高效操作。</p>
+          <p>简洁直观的界面，支持亮色/暗色主题切换，1200×800 宽敞窗口，高效操作。</p>
         </div>
         
         <div class="feature-card">
           <div class="feature-icon">🔓</div>
           <h3>主密码保护</h3>
           <p>单一主密码解锁所有数据，采用 PBKDF2 密钥派生，暴力破解几乎不可能。</p>
+        </div>
+
+        <div class="feature-card new-feature">
+          <div class="feature-badge">v1.0.5 新增</div>
+          <div class="feature-icon">📄</div>
+          <h3>文本对比</h3>
+          <p>左右分栏对比两段文本，精确到字符级别的差异高亮，支持行级/字符级模式，可上传文本文件。</p>
+        </div>
+
+        <div class="feature-card new-feature">
+          <div class="feature-badge">v1.0.5 新增</div>
+          <div class="feature-icon">🔧</div>
+          <h3>JSON 格式化</h3>
+          <p>一键格式化、压缩、修复 JSON，语法高亮 + 树形视图可折叠展开，支持上传文件和下载结果。</p>
         </div>
       </div>
     </div>
@@ -178,9 +192,9 @@
             </svg>
           </div>
           <h3>macOS</h3>
-          <p class="version">版本 1.0.4</p>
+          <p class="version">版本 1.0.5</p>
           <p class="arch">Apple Silicon (M1/M2/M3/M4)</p>
-          <a href="/downloads/PasswordCat_1.0.4_aarch64.dmg" class="btn btn-download">
+          <a href="/downloads/PasswordCat_1.0.5_aarch64.dmg" class="btn btn-download">
             <span>⬇️</span> 下载 DMG
           </a>
           <p class="download-note">支持 macOS 10.13+</p>
@@ -194,15 +208,15 @@
             </svg>
           </div>
           <h3>Windows</h3>
-          <p class="version">版本 1.0.4</p>
+          <p class="version">版本 1.0.5</p>
           <p class="arch">64-bit 安装包</p>
-          <a href="/downloads/PasswordCat_1.0.4_x64-setup.exe" class="btn btn-download">
+          <a href="/downloads/PasswordCat_1.0.5_x64-setup.exe" class="btn btn-download">
             <span>⬇️</span> 下载 EXE
           </a>
           <p class="download-note">支持 Windows 10/11</p>
         </div>
         
-        <div class="download-card coming-soon">
+        <div class="download-card active">
           <div class="platform-icon">
             <!-- Ubuntu logo -->
             <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
@@ -217,11 +231,11 @@
             </svg>
           </div>
           <h3>Linux</h3>
-          <p class="version">即将推出</p>
+          <p class="version">版本 1.0.5</p>
           <p class="arch">AppImage 格式</p>
-          <button class="btn btn-disabled" disabled>
-            <span>🔜</span> 敬请期待
-          </button>
+          <a href="/downloads/password-cat_1.0.5_amd64.AppImage" class="btn btn-download">
+            <span>⬇️</span> 下载 AppImage
+          </a>
           <p class="download-note">支持 Ubuntu/Debian/Fedora</p>
         </div>
       </div>
@@ -250,6 +264,8 @@
             <div class="mockup-sidebar">
               <div class="mockup-nav active">🔑 密码</div>
               <div class="mockup-nav">🖥️ 服务器</div>
+              <div class="mockup-nav">📄 文本对比</div>
+              <div class="mockup-nav">🔧 JSON格式化</div>
             </div>
             <div class="mockup-main">
               <div class="mockup-card">

@@ -240,12 +240,36 @@ body {
   border-radius: 1rem;
   padding: 2rem;
   transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
 }
 
 .feature-card:hover {
   background: var(--bg-card-hover);
   transform: translateY(-4px);
   box-shadow: var(--shadow);
+}
+
+/* 新功能卡片高亮边框 */
+.feature-card.new-feature {
+  border-color: rgba(102, 126, 234, 0.5);
+  background: linear-gradient(135deg, rgba(102, 126, 234, 0.08) 0%, rgba(118, 75, 162, 0.08) 100%);
+}
+
+.feature-card.new-feature:hover {
+  border-color: rgba(102, 126, 234, 0.8);
+}
+
+.feature-badge {
+  display: inline-block;
+  background: var(--gradient);
+  color: white;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 10px;
+  border-radius: 999px;
+  margin-bottom: 0.75rem;
+  letter-spacing: 0.03em;
 }
 
 .feature-icon {
