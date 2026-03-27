@@ -31,12 +31,13 @@
     <div class="hero-container">
       <div class="hero-badge">🎉 v1.0.6 现已发布</div>
       <h1 class="hero-title">
-        安全、简洁的<br>
-        <span class="gradient-text">密码管理工具</span>
+        数据不离本机，<br>
+        <span class="gradient-text">安全掌握在自己手中</span>
       </h1>
       <p class="hero-subtitle">
-        PasswordCat 是一款开源的本地密码管理器，采用端到端加密，
-        支持桌面客户端和 Chrome 浏览器插件，让你的数字资产安全无忧。
+        PasswordCat 是一款开源的本地工具箱，密码、服务器信息全程加密存储在本机，
+        内置文本对比、JSON格式化、Base64、哈希计算等开发工具，
+        <strong>所有操作离线完成，敏感数据永远不经过浏览器，不上传任何服务器。</strong>
       </p>
       <div class="hero-actions">
         <a href="#download" class="btn btn-primary">
@@ -48,16 +49,79 @@
       </div>
       <div class="hero-stats">
         <div class="stat">
+          <span class="stat-number">🛡️</span>
+          <span class="stat-label">数据不离本机</span>
+        </div>
+        <div class="stat">
+          <span class="stat-number">🚫</span>
+          <span class="stat-label">零网络请求</span>
+        </div>
+        <div class="stat">
           <span class="stat-number">🔒</span>
-          <span class="stat-label">本地加密存储</span>
+          <span class="stat-label">AES-256 加密</span>
         </div>
         <div class="stat">
-          <span class="stat-number">🚀</span>
-          <span class="stat-label">极速响应</span>
+          <span class="stat-number">🧰</span>
+          <span class="stat-label">开发者工具箱</span>
         </div>
-        <div class="stat">
-          <span class="stat-number">🧩</span>
-          <span class="stat-label">Chrome 插件</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Security Philosophy Section -->
+  <section class="security-section">
+    <div class="container">
+      <div class="section-badge">🛡️ 安全理念</div>
+      <h2 class="section-title">为什么坚持本地化？</h2>
+      <p class="section-subtitle">在线工具方便，但代价是数据暴露风险</p>
+
+      <div class="security-compare">
+        <div class="compare-card danger-card">
+          <div class="compare-icon">⚠️</div>
+          <h3>在线工具的隐患</h3>
+          <ul class="compare-list">
+            <li>密码、密钥粘贴到在线工具，数据经过对方服务器</li>
+            <li>浏览器历史、剪贴板可能被恶意扩展读取</li>
+            <li>在线 Base64/哈希/JSON 工具无法保证不记录输入内容</li>
+            <li>敏感数据一旦上传，你无法控制其去向</li>
+          </ul>
+        </div>
+
+        <div class="compare-arrow">VS</div>
+
+        <div class="compare-card safe-card">
+          <div class="compare-icon">✅</div>
+          <h3>PasswordCat 的方式</h3>
+          <ul class="compare-list">
+            <li>所有功能在本地运行，<strong>零网络请求</strong></li>
+            <li>Base64、哈希、文本对比、JSON 格式化全部离线计算</li>
+            <li>密码数据 AES-256-GCM 加密存储，主密码不离开设备</li>
+            <li>开源代码，任何人都可以审计，没有后门</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="security-tips">
+        <div class="tip-item">
+          <span class="tip-icon">🔑</span>
+          <div>
+            <strong>私钥、Token 怎么处理？</strong>
+            <p>用 PasswordCat 的备注字段存储，加密保存在本机，而不是粘贴到在线工具。</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">📄</span>
+          <div>
+            <strong>需要对比配置文件差异？</strong>
+            <p>用内置文本对比功能，文件内容不会离开你的电脑，即使是涉密的生产环境配置。</p>
+          </div>
+        </div>
+        <div class="tip-item">
+          <span class="tip-icon">#️⃣</span>
+          <div>
+            <strong>需要校验文件哈希或计算签名？</strong>
+            <p>内置哈希工具支持文件拖入计算，MD5/SHA256 结果本地生成，不经过任何第三方。</p>
+          </div>
         </div>
       </div>
     </div>
@@ -294,6 +358,8 @@
               <div class="mockup-nav">🖥️ 服务器</div>
               <div class="mockup-nav">📄 文本对比</div>
               <div class="mockup-nav">🔧 JSON格式化</div>
+              <div class="mockup-nav">🔤 Base64</div>
+              <div class="mockup-nav">#️⃣ 哈希</div>
             </div>
             <div class="mockup-main">
               <div class="mockup-card">
