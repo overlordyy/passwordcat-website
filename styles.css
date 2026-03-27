@@ -301,6 +301,24 @@ body {
 .platform-icon {
   font-size: 3rem;
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.platform-icon svg {
+  width: 52px;
+  height: 52px;
+}
+
+/* Apple logo - white fill */
+.download-card.active .platform-icon svg path {
+  fill: #ffffff;
+}
+
+/* Windows logo keeps its blue */
+.download-card.coming-soon .platform-icon svg path[fill="#00adef"] {
+  fill: #00adef;
 }
 
 .download-card h3 {
