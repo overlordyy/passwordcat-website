@@ -2,24 +2,7 @@
 
 PasswordCat 官方网站 - 功能介绍与下载页面。
 
-## 🌐 在线访问
-
-https://overlordyy.github.io/passwordcat-website
-
-## 🛠️ 本地开发
-
-```bash
-# 克隆仓库
-git clone https://github.com/overlordyy/passwordcat-website.git
-cd passwordcat-website
-
-# 使用任意静态服务器
-python3 -m http.server 8080
-# 或
-npx serve .
-```
-
-访问 http://localhost:8080
+**部署域名**: https://wxbbsmange.com (443端口)
 
 ## 📦 项目结构
 
@@ -31,9 +14,9 @@ npx serve .
 └── README.md       # 说明文档
 ```
 
-## 🚀 部署
+## 🚀 部署方式
 
-网站使用 GitHub Pages 自动部署，推送到 main 分支即可。
+将文件部署到支持 443 端口的服务器，配置域名 `wxbbsmange.com` 指向该服务器即可。
 
 ## 📄 许可证
 
