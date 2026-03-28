@@ -502,6 +502,145 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+/* feature card 内的 code 标签 */
+.feature-card code {
+  background: rgba(102, 126, 234, 0.2);
+  color: #a0c0ff;
+  padding: 1px 5px;
+  border-radius: 3px;
+  font-family: 'Monaco', 'Courier New', monospace;
+  font-size: 0.85em;
+}
+
+/* ── 新 Mockup 样式 ── */
+.mockup-header-right {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  margin-left: auto;
+}
+
+.mockup-btn-sm {
+  font-size: 0.65rem;
+  padding: 2px 8px;
+  border-radius: 4px;
+  background: rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+  cursor: default;
+  &.danger { background: rgba(255,80,80,0.3); color: #ffaaaa; }
+}
+
+.mockup-body {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.mockup-nav-sidebar {
+  width: 110px;
+  flex-shrink: 0;
+  background: rgba(20,15,50,0.9);
+  padding: 8px 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-right: 1px solid rgba(255,255,255,0.06);
+}
+
+.mockup-nav-group {
+  font-size: 0.55rem;
+  color: rgba(255,255,255,0.3);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 6px 2px;
+  font-weight: 700;
+}
+
+.mockup-nav-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.08);
+  margin: 4px 4px;
+}
+
+.mockup-nav-item {
+  font-size: 0.65rem;
+  padding: 5px 8px;
+  border-radius: 6px;
+  color: rgba(255,255,255,0.55);
+  cursor: default;
+  &.active {
+    background: rgba(255,255,255,0.18);
+    color: #fff;
+    font-weight: 600;
+  }
+}
+
+.mockup-content-area {
+  flex: 1;
+  display: flex;
+  gap: 8px;
+  padding: 10px;
+  overflow: hidden;
+  background: rgba(15,15,35,0.95);
+}
+
+.mockup-ops {
+  width: 110px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.mockup-add-btn {
+  font-size: 0.6rem;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  padding: 6px 8px;
+  border-radius: 6px;
+  text-align: center;
+  font-weight: 600;
+  cursor: default;
+}
+
+.mockup-search {
+  font-size: 0.6rem;
+  background: rgba(255,255,255,0.06);
+  color: rgba(255,255,255,0.4);
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+
+.mockup-stat-box {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  border-radius: 6px;
+  padding: 8px;
+  text-align: center;
+  .mockup-stat-num { font-size: 1.2rem; font-weight: 700; color: white; }
+  .mockup-stat-lbl { font-size: 0.55rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+}
+
+.mockup-cards {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  overflow: hidden;
+}
+
+.mockup-card {
+  background: rgba(255,255,255,0.05);
+  border-radius: 6px;
+  padding: 7px 9px;
+  border: 1px solid rgba(255,255,255,0.08);
+  &.active-card { border-color: rgba(102,126,234,0.4); background: rgba(102,126,234,0.08); }
+}
+
+.server-tag { background: rgba(34,197,94,0.2) !important; color: #4ade80 !important; }
+
+.url-val { color: #667eea !important; }
+
 /* ── 安全理念板块 ── */
 .security-section {
   padding: 5rem 0;

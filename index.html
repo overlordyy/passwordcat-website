@@ -29,7 +29,7 @@
   <!-- Hero Section -->
   <section class="hero">
     <div class="hero-container">
-      <div class="hero-badge">🎉 v1.0.6 现已发布</div>
+      <div class="hero-badge">🎉 v1.1.0 现已发布</div>
       <h1 class="hero-title">
         数据不离本机，<br>
         <span class="gradient-text">安全掌握在自己手中</span>
@@ -211,6 +211,13 @@
           <h3>URL 字段支持</h3>
           <p>密码条目新增 URL 字段，卡片直接显示网址并可一键跳转，添加/编辑时一并录入，更完整的账号管理。</p>
         </div>
+
+        <div class="feature-card new-feature">
+          <div class="feature-badge">v1.1.0 新增</div>
+          <div class="feature-icon">🗄️</div>
+          <h3>SQL 格式化</h3>
+          <p>粘贴带占位符的 SQL 语句，自动识别 <code>?</code>、<code>$1</code>、<code>:name</code>、<code>#{name}</code> 等参数，填入参数值后一键格式化并替换，结果语法高亮，支持 MySQL / PostgreSQL / SQLite 多方言。</p>
+        </div>
       </div>
     </div>
   </section>
@@ -342,52 +349,94 @@
   <section class="screenshot">
     <div class="container">
       <h2 class="section-title">界面预览</h2>
+      <p class="section-subtitle">左侧导航 + 全功能工具箱，一个窗口搞定所有</p>
       <div class="screenshot-showcase">
         <div class="screenshot-frame">
+          <!-- 标题栏 -->
           <div class="mockup-header">
             <div class="mockup-dots">
-              <span></span>
-              <span></span>
-              <span></span>
+              <span></span><span></span><span></span>
             </div>
-            <div class="mockup-title">PasswordCat</div>
+            <div class="mockup-title">🐱 PasswordCat</div>
+            <div class="mockup-header-right">
+              <span class="mockup-btn-sm">🌙</span>
+              <span class="mockup-btn-sm danger">退出</span>
+            </div>
           </div>
-          <div class="mockup-content">
-            <div class="mockup-sidebar">
-              <div class="mockup-nav active">🔑 密码</div>
-              <div class="mockup-nav">🖥️ 服务器</div>
-              <div class="mockup-nav">📄 文本对比</div>
-              <div class="mockup-nav">🔧 JSON格式化</div>
-              <div class="mockup-nav">🔤 Base64</div>
-              <div class="mockup-nav">#️⃣ 哈希</div>
+          <!-- 主体：左侧导航 + 右侧内容 -->
+          <div class="mockup-body">
+            <!-- 左侧导航 -->
+            <div class="mockup-nav-sidebar">
+              <div class="mockup-nav-group">管理</div>
+              <div class="mockup-nav-item active">🔑 密码</div>
+              <div class="mockup-nav-item">🖥️ 服务器</div>
+              <div class="mockup-nav-divider"></div>
+              <div class="mockup-nav-group">工具</div>
+              <div class="mockup-nav-item">📄 文本对比</div>
+              <div class="mockup-nav-item">🔧 JSON</div>
+              <div class="mockup-nav-item">🗄️ SQL</div>
+              <div class="mockup-nav-item">🔤 Base64</div>
+              <div class="mockup-nav-item">🕐 时间戳</div>
+              <div class="mockup-nav-item">#️⃣ 哈希</div>
             </div>
-            <div class="mockup-main">
-              <div class="mockup-card">
-                <div class="mockup-card-header">
-                  <span>🐙 GitHub</span>
-                  <span class="mockup-tag">开发</span>
-                </div>
-                <div class="mockup-card-row">
-                  <span class="mockup-label">账户</span>
-                  <span class="mockup-value">user@example.com</span>
-                </div>
-                <div class="mockup-card-row">
-                  <span class="mockup-label">密码</span>
-                  <span class="mockup-value">••••••••</span>
+            <!-- 右侧内容 -->
+            <div class="mockup-content-area">
+              <!-- 左栏：操作 -->
+              <div class="mockup-ops">
+                <div class="mockup-add-btn">+ 添加密码</div>
+                <div class="mockup-search">🔍 搜索密码...</div>
+                <div class="mockup-stat-box">
+                  <div class="mockup-stat-num">3</div>
+                  <div class="mockup-stat-lbl">密码总数</div>
                 </div>
               </div>
-              <div class="mockup-card">
-                <div class="mockup-card-header">
-                  <span>📧 Gmail</span>
-                  <span class="mockup-tag">邮箱</span>
+              <!-- 右栏：密码卡片列表 -->
+              <div class="mockup-cards">
+                <div class="mockup-card active-card">
+                  <div class="mockup-card-header">
+                    <span>🐙 GitHub</span>
+                    <span class="mockup-tag">开发</span>
+                  </div>
+                  <div class="mockup-card-row">
+                    <span class="mockup-label">账户</span>
+                    <span class="mockup-value">user@example.com</span>
+                  </div>
+                  <div class="mockup-card-row">
+                    <span class="mockup-label">密码</span>
+                    <span class="mockup-value">••••••••</span>
+                  </div>
+                  <div class="mockup-card-row">
+                    <span class="mockup-label">URL</span>
+                    <span class="mockup-value url-val">github.com</span>
+                  </div>
                 </div>
-                <div class="mockup-card-row">
-                  <span class="mockup-label">账户</span>
-                  <span class="mockup-value">user@gmail.com</span>
+                <div class="mockup-card">
+                  <div class="mockup-card-header">
+                    <span>📧 Gmail</span>
+                    <span class="mockup-tag">邮箱</span>
+                  </div>
+                  <div class="mockup-card-row">
+                    <span class="mockup-label">账户</span>
+                    <span class="mockup-value">user@gmail.com</span>
+                  </div>
+                  <div class="mockup-card-row">
+                    <span class="mockup-label">密码</span>
+                    <span class="mockup-value">••••••••</span>
+                  </div>
                 </div>
-                <div class="mockup-card-row">
-                  <span class="mockup-label">密码</span>
-                  <span class="mockup-value">••••••••</span>
+                <div class="mockup-card">
+                  <div class="mockup-card-header">
+                    <span>🖥️ 生产服务器</span>
+                    <span class="mockup-tag server-tag">运维</span>
+                  </div>
+                  <div class="mockup-card-row">
+                    <span class="mockup-label">IP</span>
+                    <span class="mockup-value">192.168.1.100</span>
+                  </div>
+                  <div class="mockup-card-row">
+                    <span class="mockup-label">账户</span>
+                    <span class="mockup-value">root</span>
+                  </div>
                 </div>
               </div>
             </div>
