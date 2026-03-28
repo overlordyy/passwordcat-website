@@ -66,6 +66,7 @@ body {
   image-rendering: pixelated;
   object-fit: cover;
   box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  flex-shrink: 0;
 }
 
 .mockup-logo-img {
