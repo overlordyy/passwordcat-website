@@ -59,6 +59,25 @@ body {
   font-size: 1.75rem;
 }
 
+.site-logo-img {
+  width: 32px;
+  height: 32px;
+  border-radius: 7px;
+  image-rendering: pixelated;
+  object-fit: cover;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+}
+
+.mockup-logo-img {
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  image-rendering: pixelated;
+  object-fit: cover;
+  vertical-align: middle;
+  margin-right: 3px;
+}
+
 .nav-links {
   display: flex;
   gap: 2rem;
