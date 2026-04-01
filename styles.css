@@ -207,31 +207,33 @@ body {
   border-color: var(--primary);
 }
 
-/* macOS 双架构布局 */
-.mac-arch-buttons {
-  display: flex;
-  flex-direction: column;
-  gap: 0;
-  margin: 1rem 0;
+/* macOS 架构选择下拉 */
+.mac-select-wrap {
+  margin: 0.75rem 0;
 }
 
-.mac-arch-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.75rem 0;
+.mac-arch-select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  background: var(--bg-card);
+  border: 1px solid rgba(102, 126, 234, 0.4);
+  border-radius: 0.5rem;
+  color: var(--text-primary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23667eea' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.5rem;
+  transition: border-color 0.2s;
 }
 
-.mac-arch-divider {
-  height: 1px;
-  background: var(--border);
-  margin: 0;
-}
-
-.mac-arch-item .arch {
-  font-size: 0.8rem;
-  color: var(--text-secondary);
-  margin: 0;
+.mac-arch-select:hover,
+.mac-arch-select:focus {
+  border-color: var(--primary);
 }
 
 .btn-disabled {
