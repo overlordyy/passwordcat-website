@@ -259,6 +259,16 @@ body {
 
 .stat-number {
   font-size: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stat-pixel-icon {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+  image-rendering: crisp-edges;
 }
 
 .stat-label {
