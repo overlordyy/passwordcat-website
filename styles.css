@@ -194,6 +194,46 @@ body {
   justify-content: center;
 }
 
+.btn-download-secondary {
+  background: transparent;
+  color: var(--primary);
+  border: 1px solid rgba(102, 126, 234, 0.5);
+  width: 100%;
+  justify-content: center;
+}
+
+.btn-download-secondary:hover {
+  background: rgba(102, 126, 234, 0.1);
+  border-color: var(--primary);
+}
+
+/* macOS 双架构布局 */
+.mac-arch-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  margin: 1rem 0;
+}
+
+.mac-arch-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0.75rem 0;
+}
+
+.mac-arch-divider {
+  height: 1px;
+  background: var(--border);
+  margin: 0;
+}
+
+.mac-arch-item .arch {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin: 0;
+}
+
 .btn-disabled {
   background: var(--bg-card);
   color: var(--text-muted);
