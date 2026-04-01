@@ -1069,3 +1069,125 @@ body {
   min-width: 0;
 }
 
+/* ── 功能轮播 ── */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0;
+}
+
+.carousel-viewport {
+  overflow: hidden;
+  flex: 1;
+  border-radius: 1rem;
+}
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+}
+
+/* 每张卡片占轨道宽度的 1/3 */
+.carousel-track .feature-card {
+  flex: 0 0 calc(100% / 3);
+  min-width: calc(100% / 3);
+  box-sizing: border-box;
+  margin: 0;
+  border-radius: 1rem;
+  padding: 2rem 1.6rem;
+}
+
+/* 卡片之间加间距 */
+.carousel-track .feature-card:not(:last-child) {
+  margin-right: 0;
+}
+
+/* 轨道内卡片间距用 gap 处理 */
+.carousel-track {
+  gap: 1.5rem;
+}
+
+/* 每页宽度需包含 gap，精确计算 */
+/* 3张卡片 + 2个gap(1.5rem each)，卡片宽 = (100% - 3rem) / 3 */
+.carousel-track .feature-card {
+  flex: 0 0 calc((100% - 3rem) / 3);
+  min-width: calc((100% - 3rem) / 3);
+}
+
+/* 箭头按钮 */
+.carousel-arrow {
+  background: rgba(102, 126, 234, 0.15);
+  border: 1px solid rgba(102, 126, 234, 0.3);
+  color: #a0b0ff;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.carousel-arrow:hover {
+  background: rgba(102, 126, 234, 0.35);
+  color: #fff;
+  transform: scale(1.08);
+}
+
+.carousel-prev { margin-right: 1rem; }
+.carousel-next { margin-left: 1rem; }
+
+/* 指示点 */
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 2rem;
+}
+
+.carousel-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(102, 126, 234, 0.3);
+  cursor: pointer;
+  transition: all 0.25s;
+  padding: 0;
+}
+
+.carousel-dot.active {
+  background: #667eea;
+  width: 24px;
+  border-radius: 4px;
+}
+
+.carousel-dot:hover {
+  background: rgba(102, 126, 234, 0.6);
+}
+
+/* 响应式：移动端单列 */
+@media (max-width: 768px) {
+  .carousel-track .feature-card {
+    flex: 0 0 100%;
+    min-width: 100%;
+  }
+  .carousel-track {
+    gap: 0;
+  }
+  .carousel-arrow {
+    width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+  }
+  .carousel-prev { margin-right: 0.5rem; }
+  .carousel-next { margin-left: 0.5rem; }
+}
+
