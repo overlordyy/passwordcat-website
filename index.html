@@ -427,16 +427,24 @@
           </div>
           <h3>macOS</h3>
           <p class="version">版本 1.1.7</p>
-          <p class="arch" id="macArchLabel">Apple Silicon (M1/M2/M3/M4)</p>
-          <div class="mac-select-wrap">
-            <select id="macArchSelect" class="mac-arch-select" onchange="onMacArchChange()">
-              <option value="/downloads/PasswordCat_1.1.7_aarch64.dmg">Apple Silicon (M1/M2/M3/M4)</option>
-              <option value="/downloads/PasswordCat_1.1.7_x64.dmg">Intel (x86_64)</option>
-            </select>
+          <p class="arch">Apple Silicon · Intel</p>
+          <!-- 下拉下载按钮 -->
+          <div class="dropdown-btn-wrap" id="macDropdownWrap">
+            <a id="macDownloadBtn" href="/downloads/PasswordCat_1.1.7_aarch64.dmg" class="btn btn-download dropdown-main">
+              <span>⬇️</span> <span id="macBtnLabel">下载 DMG · Apple Silicon</span>
+            </a>
+            <button class="dropdown-arrow-btn" id="macArrowBtn" onclick="toggleMacDropdown(event)" aria-label="选择版本">
+              ▾
+            </button>
+            <div class="dropdown-menu" id="macDropdownMenu">
+              <a href="/downloads/PasswordCat_1.1.7_aarch64.dmg" class="dropdown-item active" onclick="selectMacArch(event, this, 'Apple Silicon (M1/M2/M3/M4)', '/downloads/PasswordCat_1.1.7_aarch64.dmg')">
+                <span class="dropdown-check">✓</span> Apple Silicon (M1/M2/M3/M4)
+              </a>
+              <a href="/downloads/PasswordCat_1.1.7_x64.dmg" class="dropdown-item" onclick="selectMacArch(event, this, 'Intel (x86_64)', '/downloads/PasswordCat_1.1.7_x64.dmg')">
+                <span class="dropdown-check"></span> Intel (x86_64)
+              </a>
+            </div>
           </div>
-          <a id="macDownloadBtn" href="/downloads/PasswordCat_1.1.7_aarch64.dmg" class="btn btn-download">
-            <span>⬇️</span> 下载 DMG
-          </a>
           <p class="download-note">支持 macOS 10.13+</p>
           <div class="install-tip">
             <div class="install-tip-title">⚠️ 安装提示</div>
@@ -616,14 +624,40 @@
   </footer>
 
   <script>
-  function onMacArchChange() {
-    var sel = document.getElementById('macArchSelect');
-    var btn = document.getElementById('macDownloadBtn');
-    var label = document.getElementById('macArchLabel');
-    if (!sel || !btn) return;
-    btn.href = sel.value;
-    label.textContent = sel.options[sel.selectedIndex].text;
+  function toggleMacDropdown(e) {
+    e.stopPropagation();
+    var menu = document.getElementById('macDropdownMenu');
+    var wrap = document.getElementById('macDropdownWrap');
+    var open = menu.classList.contains('open');
+    menu.classList.toggle('open', !open);
+    wrap.classList.toggle('active', !open);
   }
+
+  function selectMacArch(e, el, label, url) {
+    e.preventDefault();
+    document.getElementById('macDownloadBtn').href = url;
+    document.getElementById('macBtnLabel').textContent = '下载 DMG · ' + label.split(' (')[0];
+    // 更新选中态
+    document.querySelectorAll('#macDropdownMenu .dropdown-item').forEach(function(item) {
+      item.classList.remove('active');
+      item.querySelector('.dropdown-check').textContent = '';
+    });
+    el.classList.add('active');
+    el.querySelector('.dropdown-check').textContent = '✓';
+    // 关闭菜单
+    document.getElementById('macDropdownMenu').classList.remove('open');
+    document.getElementById('macDropdownWrap').classList.remove('active');
+    // 直接触发下载
+    window.location.href = url;
+  }
+
+  // 点击外部关闭
+  document.addEventListener('click', function() {
+    var menu = document.getElementById('macDropdownMenu');
+    var wrap = document.getElementById('macDropdownWrap');
+    if (menu) menu.classList.remove('open');
+    if (wrap) wrap.classList.remove('active');
+  });
   </script>
   <script src="script.js"></script>
   <script>
